@@ -3,16 +3,25 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {"runalltests":"npx playwright test",
-              "showReports":"npx playwright show-reports",
-              "runUITests":"npx playwright test --ui"},
-
+  "scripts": {
+    "runalltests": "npx playwright test",
+    "showReports": "npx playwright show-reports",
+    "runUITests": "npx playwright test --ui",
+    "runUITestsWithReport": "npx playwright test --ui --reporter=html",
+    "runtestswitAllureReports": "npx playwright test && allure generate ./allure-results -o ./allure-report --clean && allure open ./allure-report"
+    
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.54.1",
-    "@types/node": "^24.0.14"
+    "@playwright/test": "^1.54.2",
+    "@types/node": "^24.0.14",
+    "allure-playwright": "^3.3.3"
+  },
+  "dependencies": {
+    "@playwright/mcp": "^0.0.33",
+    "xlsx": "^0.18.5"
   }
 }
