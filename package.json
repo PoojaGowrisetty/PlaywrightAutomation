@@ -9,7 +9,6 @@
     "runUITests": "npx playwright test --ui",
     "runUITestsWithReport": "npx playwright test --ui --reporter=html",
     "runtestswitAllureReports": "npx playwright test && allure generate ./allure-results -o ./allure-report --clean && allure open ./allure-report"
-    
   },
   "keywords": [],
   "author": "",
@@ -22,6 +21,7 @@
   },
   "dependencies": {
     "@playwright/mcp": "^0.0.33",
+    "dotenv": "^17.2.1",
     "xlsx": "^0.18.5"
   }
 }
